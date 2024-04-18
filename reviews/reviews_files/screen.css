@@ -1,0 +1,525 @@
+@charset "UTF-8";
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Theme colors ~~ */
+.primaryColor, ul.nav li.currentNavTab a, .navBar ul.nav a:hover, ul.nav a:active, ul.nav a:focus, .mainSectionTitle, .sidebarSectionTitle, a:link, a:visited, .replyLeftBlock { 
+	color:  #05457b;
+}
+.secondaryColor {
+	
+}
+.primaryBkgnd, .navBar, .footer {
+	background: #05457b;
+}
+.secondaryBkgnd, ul.nav a:hover, ul.nav a:active, ul.nav a:focus, .reviewReplyBlock, .sidebar1, .reqForm {
+	background: #EEEEEE
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2 {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 800px;
+	background: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	border: 1px solid #bbb;
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: url(../images/header-dental.jpg) no-repeat right bottom;
+	height: 150px;
+	padding: 20px 0 20px 30px
+}
+.header .practiceName {
+	font: 30px bold;
+	margin: 0;
+}
+.header .tagline {
+	font: 18px bold;
+	margin: 0;
+}
+.header .reviewTotal {
+  margin: 5px 0 0 0;
+}
+.cosmetic {
+  background: url(../images/header-cosmetic.jpg) no-repeat right bottom;
+}
+.eyecare {
+  background: url(../images/header-eyecare.jpg) no-repeat right bottom;
+}
+.medical {
+  background: url(../images/header-medical.jpg) no-repeat right bottom;
+}
+.other {
+  background: url(../images/header-other.jpg) no-repeat right bottom;
+}
+.stream {
+  background: url(../images/header-pt.jpg) no-repeat right bottom;
+}
+.vet {
+  background: url(../images/header-vet.jpg) no-repeat right bottom;
+}
+
+.sidebar1 {
+	float: right;
+	width: 240px;
+	padding: 0  0 10px 0; /* top padding needs to be 30px minus the .sidebarSectionTitle top padding (currently 30px) */
+}
+.sidebar1 p {
+	margin: 0 15px 10px 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-left: 30px;
+	padding-right: 15px;
+	font-size: 12px;
+}
+.sidebar1 h3 {
+	margin: 0;
+	padding: 0 15px 0 30px;
+	font-size: 12px;
+}
+.sidebarHr {
+	padding-top: 10px;
+}
+#datepicker {
+	padding: 0 0 30px 25px;
+}
+.appt-request-button {
+	margin-left: 10px;
+}
+.content {
+	width: 480px;
+	padding: 30px 0 10px 0;
+}
+@media(min-width:992px) {
+  .content {
+    width: 703px;
+    padding: 30px 0 10px 0;
+  }
+}
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+.navBar {
+	padding: 0 0 0 20px;
+	min-height: 1px;
+}
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+}
+ul.nav li {
+	float: left;
+	line-height: 1.6em;
+}
+ul.nav a {
+	color: #FFF;
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 30px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	font-size: 14px;
+}
+ul.nav li.currentNavTab, ul.nav li.currentNavTab a:hover {
+	background: #FFF;
+}
+.navBar .socialiconsBlock {
+	float: right;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 25px 0 15px 0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	min-height: 1px;
+	font-size: 12px;
+}
+.footerColNav {
+	width: 190px;
+	float: left;
+	padding: 0 15px;
+	color: #fff;
+}
+.footerColGenuine {
+	width: 320px;
+	float: left;
+	padding: 0 15px;
+	color: #fff;
+  text-align: center;
+}
+.footerColSocial {
+	float: left;
+	padding: 0;
+	color: #fff;
+}
+ul.footerLinks {
+	list-style: none; /* this removes the list marker */
+}
+ul.footerLinks li {
+	line-height: 1.4em;
+}
+ul.footerLinks a, ul.footerLinks a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 2px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	color: #FFF;
+}
+ul.footerLinks a:hover { 
+	text-decoration: underline;
+}
+.copyright {
+	text-align: center;
+	display: block;
+	font-size: 11px;
+	padding: 15px 0;
+}
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.mainSectionTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 0 15px;
+	display: block;
+}
+.sidebarSectionTitle {
+	font-size: 16px;
+	padding: 30px 15px 15px 15px;
+}
+.reviewBlock { /* padding and margins only */
+  font-size: 12px;
+	padding: 10px 10px 2px 0;
+	margin: 0 0 10px 0;
+}
+.reviewIcon {
+	float: left;
+	margin: 0 10px 0 10px;
+	padding: 0;
+}
+.reviewSection {
+	float: left;
+	width: 440px;
+	margin: 0;
+	padding: 0 0 5px 30px;
+}
+.reviewSection p {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+.reviewSection p img {
+	margin: 0 0 -3px 0;
+	padding: 0;
+}
+.reviewTitle {
+	margin: 0 5px ;
+	font-weight: bold;
+}
+.reviewHr {
+	float: left;
+	padding: 0;
+	margin: 0 0 0 5px;
+}
+.replyLeftBlock {
+	float: left;
+	padding: 0 20px 0 10px;
+	min-height: 1px;
+}
+.replyRightBlock {
+	float: left;
+	width: 350px;
+	border-left: 1px solid #05457b;
+	padding: 5px 0 5px 15px;
+}
+.geniuneIcon {
+	float: left;
+	margin: -5px -3px 0 0;
+	padding: 0 0 0 5px;
+}
+.reviewReplyBlock { /*padding and margins only */
+	margin: 0 30px 0 30px;
+	padding: 10px 15px 10px 10px;
+	min-height: 1px;
+}
+.callToActionBlock {
+	clear: both;
+	text-align: center;
+	padding: 15px 0 30px 0;
+}
+.callToActionBlock a {
+	text-decoration: none;
+	color: #000;
+}
+.actionButtonWrapper {
+	text-align: left;
+}
+.actionButton {
+	float: left;
+	height: 40px;
+	margin: 10px 30px 10px  90px;
+}
+.actionButton img {
+	float: left;
+}
+.actionButton p {
+	float: left;
+	line-height: 3em;
+	background: url(../images/action-btn-bg.png) repeat-x;
+	margin: 0;
+	padding: 0;
+}
+.paginationBlock {
+	
+}
+/* ~~ form ~~ */
+.reqForm {
+	margin:20px auto 0 auto;
+	width:380px;
+	padding: 25px 0 15px 50px;
+	border:solid 1px #578AB5;
+}
+.reqForm p{
+	font-size:11px;
+	color:#666666;
+	margin-bottom:20px;
+	border-bottom:solid 1px #b7ddf2;
+	padding-bottom:10px;
+}
+.reqForm label{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+	float:left;
+	font-size: 12px;
+}
+.reqForm .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+.reqForm input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:150px;
+margin:2px 0 20px 10px;
+}
+.reqForm textarea{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:150px;
+margin:2px 0 20px 10px;
+}
+.reqForm select{
+  float:left;
+  font-size: 12px;
+  padding:4px 2px;
+  border:solid 1px #aacfe4;
+  width: 400px;
+  margin:2px 0px 20px 10px;
+  background-color: white;
+}
+.reqForm a {
+	text-decoration: none;
+}
+@media(min-width:992px) {
+  .reqForm {
+    width:640px;
+  }
+  .reqForm input{
+    width: 400px;
+  }
+  .reqForm textarea{
+    width: 400px;
+  }
+}
+
+/* ////////// Map /////////*/
+#map-container {
+    display: block;
+		padding: 0 0 0 15px;
+}
+
+#map {
+	border: 1px solid #3c5e80;
+	margin: 0 0 15px 0;
+	width: 190px;
+	height: 190px;
+}
+
+.pull-right{
+  float: right;
+}
+.container
+{
+  width: 100%;
+  max-width: 970px;
+  padding: 0px;
+}
+
+.gray_bg
+{
+  background-color:  #EEEEEE;
+  border-left: 1px solid #ccc;
+}
+
+#datepicker
+{
+  padding: 0px;
+  padding-left: 7px;
+  padding-bottom: 14px;
+}
+
+.sidebarSectionTitle
+{
+  padding: 14px 0px;
+  text-align: center;
+}
+
+.reviewBlock
+{
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.reviewSection
+{
+  float: none;
+  width: 100%;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.dtreviewed
+{
+  font-weight: bold;
+  font-style: normal;
+}
+
+.reviewer
+{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tenure
+{
+  font-size: 13px;
+}
+
+.summary a:before
+{
+  content: '"';
+}
+
+.summary a:after
+{
+  content: '"';
+}
+
+.summary a
+{
+  font-weight: normal;
+  font-style: italic;
+}
+
+.summary a:hover
+{
+  text-decoration: none;
+  color: #337ab7;
+}
+
+#sidebar h3
+{
+  font-size: 14px;
+  margin: 0px;
+  margin-bottom: 3px;
+}
+
+#sidebar p
+{
+  margin-bottom: 21px;
+}
+
+.collapsed_sidebar
+{
+  display: none;
+}
+
+#show_sidebar
+{
+  position: fixed;
+  cursor: pointer;
+  top: 170px;
+  right: 0px;
+  padding: 10px;
+  background-color: #EEE;
+  border: 1px solid #AAA;
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 999999;
+}
+
+/* This is required to correctly style the injected div from google's recaptcha */
+#mycaptcha > div > div {
+  margin-left: 15px;
+  width: auto !important;
+  height: auto !important;
+  text-align: center;
+}

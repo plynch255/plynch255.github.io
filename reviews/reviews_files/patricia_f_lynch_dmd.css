@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+
+
+.primaryColor, ul.nav li.currentNavTab a, .navBar ul.nav a:hover, ul.nav a:active, ul.nav a:focus, .mainSectionTitle, .sidebarSectionTitle, a:link, a:visited, .replyLeftBlock { 
+	color: #39b44a;
+}
+.primaryBkgnd, .navBar, .footer {
+	background: #39b44a;
+}
+.replyRightBlock {
+	border-left-color: #39b44a;
+}
+.btn-primary {
+  background-color: #39b44a;
+  border-color: #39b44a;
+}
+.btn-primary:hover {
+  background-color: #2e903b;
+  border-color: #2e903b;
+}
+.ui-datepicker-header {
+  background-image: none;
+  background-color: #39b44a;
+  border: none;
+}
+.ui-datepicker{
+  border-color: #39b44a;
+  width: 13em;
+}
+.ui-datepicker table {
+  font-size: .7em;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border-color: #d7f0db;
+  background-image: none;
+  background-color: #ebf8ed;
+  color: #39b44a;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+  background-color: #f5fbf6;
+  border-color: #39b44a;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+  background-image: none;
+  background-color: #2e903b;
+  border-color: #226c2c;
+  color: #39b44a;
+}
+.ui-datepicker-calendar .ui-state-hover {
+  background-color: #d7f0db;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  border-color: #4dbc5c;
+  background-color: #39b44a;
+  color: #FFFFFF;
+}
+.ui-state-hover .ui-icon.ui-icon, .ui-state-focus .ui-icon.ui-icon{
+  background-image: url(https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.1/themes/redmond/images/ui-icons_d8e7f3_256x240.png);
+}
+.reviewTitle a{
+  color: #39b44a;
+}
+.reqForm {
+  border-color: #39b44a;
+}
+.reqForm input, .reqForm textarea, .reqForm select{
+border-color: #9cdaa5
+}
